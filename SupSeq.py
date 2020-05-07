@@ -1,20 +1,32 @@
 """
+Given two strings, one is a subsequence if all of the elements of the first string 
+occur in the same order within the second string. They do not have to be contiguous
+in the second string, but order must be maintained. For example, given the string 
+'I like cheese', the words ('I', 'cheese') are one possible subsequence of that 
+string. Words are space delimited. 
 
+Given two strings, s and t, where t is a subsequence of s, report the words of s, 
+missing in t (case sensitive), in the order they are missing.
+
+Example:
+s = 'I like cheese'
+t = 'like'
 """
 
 def missingWords(s, t):
-    # Write your code here
 
     """
+    this solution does not work for all test cases. 
+
     inputs:
     s = string
     t = string
     """
     missingWords = []
+    
     new_t = t.split()
-    print(new_t)
     new_s = s.split()
-    print(new_s)
+
     for index, word in enumerate(new_s):
         if new_t[index] != word:
             missingWords.append(word)
@@ -26,6 +38,8 @@ def missingWords(s, t):
 
 def missingWords2(s, t):
     """
+    this solution does not work for all test cases. 
+
     inputs:
     s = string
     t = string
@@ -60,6 +74,8 @@ def missingWords2(s, t):
 
 def missingWords3(s, t):
     """
+    this solution does not work for all test cases.
+    
     inputs:
     s = string
     t = string
@@ -77,11 +93,11 @@ def missingWords3(s, t):
     j = 0
 
     for i in range(len(new_s)):
-        if j <= len(new_t) - 1
-        if new_s[i] != new_t[j]:
-            missing.append(new_s[i])
-        else:
-            j += 1
+        if j <= len(new_t) - 1:
+            if new_s[i] != new_t[j]:
+                missing.append(new_s[i])
+            else:
+                j += 1
 
     return missing
 
